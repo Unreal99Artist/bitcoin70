@@ -1,0 +1,6 @@
+usr/local/bin/btc69-qt usr/bin
+share/pixmaps/btc6932.xpm usr/share/pixmaps
+share/pixmaps/btc6916.xpm usr/share/pixmaps
+share/pixmaps/btc69128.png usr/share/pixmaps
+debian/btc69-qt.desktop usr/share/applications
+debian/btc69-qt.protocol usr/share/kde4/services/

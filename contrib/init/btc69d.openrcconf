@@ -1,0 +1,33 @@
+# /etc/conf.d/btc69d: config file for /etc/init.d/btc69d
+
+# Config file location
+#BTC69D_CONFIGFILE="/etc/btc69/btc69.conf"
+
+# What directory to write pidfile to?  (created and owned by $BTC69D_USER)
+#BTC69D_PIDDIR="/var/run/btc69d"
+
+# What filename to give the pidfile
+#BTC69D_PIDFILE="${BTC69D_PIDDIR}/btc69d.pid"
+
+# Where to write btc69d data (be mindful that the blockchain is large)
+#BTC69D_DATADIR="/var/lib/btc69d"
+
+# User and group to own btc69d process
+#BTC69D_USER="btc69"
+#BTC69D_GROUP="btc69"
+
+# Path to btc69d executable
+#BTC69D_BIN="/usr/bin/btc69d"
+
+# Nice value to run btc69d under
+#BTC69D_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#BTC69D_OPTS=""
+
+# The timeout in seconds OpenRC will wait for btc69d to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BTC69D_SIGTERM_TIMEOUT=60

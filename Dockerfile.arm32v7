@@ -1,0 +1,23 @@
+FROM arm32v7/ubuntu:latest
+
+MAINTAINER cade <cade.call@mediciventures.com>
+
+EXPOSE $RPCPORT
+
+EXPOSE $PORT
+
+RUN useradd -ms /bin/bash btc69
+
+RUN mkdir /etc/btc69
+
+RUN mkdir /var/lib/btc69
+
+RUN chown btc69:btc69 /etc/btc69 /var/lib/btc69
+
+WORKDIR /home/btc69
+
+COPY --chown=btc69:btc69 linux64/* ./run.sh /home/btc69/
+
+USER btc69
+
+CMD ["/home/btc69/run.sh"]

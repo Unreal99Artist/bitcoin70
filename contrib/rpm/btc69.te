@@ -1,0 +1,81 @@
+policy_module(btc69, 1.100.1)
+
+########################################
+#
+# Declarations
+#
+
+type btc69_t;
+type btc69_exec_t;
+init_daemon_domain(btc69_t, btc69_exec_t)
+
+permissive btc69_t;
+
+type btc69_initrc_exec_t;
+init_script_file(btc69_initrc_exec_t)
+
+type btc69_conf_t;
+files_type(btc69_conf_t)
+
+type btc69_var_lib_t;
+files_type(btc69_var_lib_t)
+
+type btc69_var_run_t;
+files_type(btc69_var_run_t)
+
+type btc69_port_t;
+corenet_port(btc69_port_t)
+
+########################################
+#
+# btc69 local policy
+#
+allow btc69_t self:process { fork };
+
+allow btc69_t self:fifo_file rw_fifo_file_perms;
+allow btc69_t self:unix_stream_socket create_stream_socket_perms;
+
+manage_dirs_pattern(btc69_t, btc69_conf_t, btc69_conf_t)
+manage_files_pattern(btc69_t, btc69_conf_t, btc69_conf_t)
+
+manage_dirs_pattern(btc69_t, btc69_var_lib_t, btc69_var_lib_t)
+manage_files_pattern(btc69_t, btc69_var_lib_t, btc69_var_lib_t)
+files_var_lib_filetrans(btc69_t, btc69_var_lib_t, { dir file })
+
+manage_dirs_pattern(btc69_t, btc69_var_run_t, btc69_var_run_t)
+manage_files_pattern(btc69_t, btc69_var_run_t, btc69_var_run_t)
+
+sysnet_dns_name_resolve(btc69_t)
+corenet_all_recvfrom_unlabeled(btc69_t)
+
+allow btc69_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(btc69_t)
+corenet_tcp_sendrecv_generic_node(btc69_t)
+corenet_tcp_sendrecv_all_ports(btc69_t)
+corenet_tcp_bind_generic_node(btc69_t)
+
+gen_require(`
+    type btc69_port_t;
+')
+allow btc69_t btc69_port_t:tcp_socket name_bind;
+
+gen_require(`
+    type btc69_port_t;
+')
+allow btc69_t btc69_port_t:tcp_socket name_connect;
+
+domain_use_interactive_fds(btc69_t)
+
+files_read_etc_files(btc69_t)
+
+miscfiles_read_localization(btc69_t)
+
+sysnet_dns_name_resolve(btc69_t)
+
+allow btc69_t btc69_exec_t:file execute_no_trans;
+allow btc69_t self:process setsched;
+corecmd_exec_ls(btc69_t)
+corenet_tcp_connect_http_port(btc69_t)
+dev_read_urand(btc69_t)
+fs_getattr_xattr_fs(btc69_t)
+kernel_read_system_state(btc69_t)

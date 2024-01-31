@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BTC69 Core
+Comment=Connect to the Bitcoin69 P2P Network
+Comment[de]=Verbinde mit dem Bitcoin69 peer-to-peer Netzwerk
+Comment[fr]=Bitcoin69, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Bitcoin69, eşten eşe kriptografik sanal para birimi
+Exec=btc69-qt %u
+Terminal=false
+Type=Application
+Icon=btc69128
+MimeType=x-scheme-handler/btc69;
+Categories=Office;Finance;
