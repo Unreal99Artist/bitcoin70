@@ -148,9 +148,9 @@ Make the directory for sources and go into it.
 
 __Download BTC69 source.__
 
-`git clone https://github.com/AIPowerGrid/AI-Power-Grid-Core`
+`git clone https://github.com/bitcoin69fullpow/bitcoin69`
 
-`cd AI-Power-Grid-Core`
+`cd Bitcoin69`
 
 `git checkout develop` # this checks out the develop branch.
 

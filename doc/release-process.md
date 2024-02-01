@@ -98,13 +98,11 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
 - Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the github-release page.
 
-- Update btc69coin.org version
+- Update btc69.org version
 
 - Announce the release:
 
-  - AIPowerGrid.io blog post
-
-  - Optionally twitter, reddit /r/AIPowerGrid, ... but this will usually sort out itself
+  - twitter: https://twitter.com/BTC69FullPOW
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 

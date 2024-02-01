@@ -20,9 +20,9 @@
 
 **Post Release :**
 
-  1. Update btc69coin.org with correct popup version
+  1. Update btc69.org with correct popup version
   
-  2. Update btc69coin.org with correct release download urls for each platform (Windows, Linux, Mac)
+  2. Update btc69.org with correct release download urls for each platform (Windows, Linux, Mac)
 
 **Build Process**
 

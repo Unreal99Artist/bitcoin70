@@ -135,7 +135,7 @@ BTC69coin repo's [root README](https://github.com/BTC69Project/BTC69coin/blob/ma
 ### Resources
 - Discuss on chat [Discord](https://discord.gg/jn6uhur), [Telegram](https://t.me/BTC69coinDev) or [Reddit](https://www.reddit.com/r/BTC69coin/).
 - Find out more on the [BTC69coin Wiki](https://btc69.wiki/wiki/BTC69coin_Wiki)
-- Visit the project home [BTC69coin.org](https://btc69coin.org)
+- Visit the project home [BTC69coin.org](https://btc69.org)
 
 ### Miscellaneous
 - [Assets Attribution](https://github.com/BTC69Project/BTC69coin/blob/master/doc/assets-attribution.md)
